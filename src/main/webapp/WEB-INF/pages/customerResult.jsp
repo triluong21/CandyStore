@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td>City</td>
-            <td>${u.city}</td>
+            <td>${c.city}</td>
         </tr>
         <tr>
             <td>State</td>
