@@ -1,9 +1,101 @@
-table{
-	border: 1px solid black;
+/*
+Colors:
+
+Darker Brown:#301800
+
+Dark Brown:  #683500
+
+Light Brown: #8325ba
+
+Caramel:     #e07200
+
+White:       #FFFFFF
+
+Black:       #000000
+
+Accent:      #003200
+*/
+
+*{
+	margin:0;
+	padding:0;
 }
 
-.error
-    {
-        color: red;
-        font-weight: bold;
-    }
+body{
+	background-color:#8325ba;
+	font: normal normal normal 1em/2em Chicago, sans-serif;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXX  
+
+        DIVISIONS  
+
+XXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+#container{
+	width: 90%;
+	margin: 0 auto;
+	border: solid thick #301800;
+	padding:1% 0 1% 0;
+	background-color: #683500;
+}
+
+header{
+	margin-top:2%;
+	border-bottom: solid thick #301800;
+}
+
+#main{
+	width:97%;
+	padding:2%;
+	margin:1%;
+}
+
+footer{
+	border-top: solid thick #301800;
+	width:100%;
+	margin:5% auto;
+	padding:0.5em 0;
+	clear:both;
+	text-align:center;
+	color:#e07200;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXX  
+
+         NAV BAR  
+
+XXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+nav{
+	width:90%;
+	margin:0 auto;
+	padding:5px 10px 5px 10px;
+	text-align:center;
+	display:block;
+}
+
+nav ul{
+	width:100%;
+	font-weight: bold;
+	list-style:none;
+}
+
+nav ul li{
+	display:inline;
+	width:10%;
+}
+
+nav ul li a {
+	width:10%;
+	padding:5px;
+	margin:2px;
+	color:#e07200;
+	text-decoration:none;
+}
+
+nav ul li a:hover{
+	background:#e07200;
+	color:#683500;
+}
+

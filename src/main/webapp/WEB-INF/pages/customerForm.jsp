@@ -11,7 +11,7 @@
 <title>Customer Entrance Handling</title>
 </head>
 <body>
-  <section id="Container">
+  <section id="container">
     <header>
 	  <section id="title">
 	    <h1>Candy Store</h1>
@@ -76,7 +76,7 @@
     	</table>
     </mvc:form>
     <a href = "viewAll.mvc">View all Customers</a>
-</section>
+  </section>
 	<footer>
 	    <nav>
 		  <ul>
@@ -85,6 +85,6 @@
 		  </ul>
 		</nav>
 	</footer>
-  </section>
+</section>
 </body>
 </html>
