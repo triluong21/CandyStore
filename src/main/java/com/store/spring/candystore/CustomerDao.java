@@ -27,4 +27,16 @@ public class CustomerDao {
 		return all;
 	}
 
+	public List<Item> getAllItems() {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		System.out.println("before query built");
+		String q = "select u from Item u";
+		System.out.println("after query built");
+		System.out.println(q);
+		TypedQuery<Item> typedQuery = em.createQuery(q, Item.class);
+		List<Item> all = typedQuery.getResultList();
+		return all;
+	}
+
 }

@@ -96,7 +96,14 @@ public class StoreController {
 		return modelAndView;
 	}
 
-
+	@RequestMapping(value = "/viewItem")
+	public ModelAndView viewItem( ){
+		ModelAndView modelAndView = new ModelAndView();
+		List<Item> allItems = dao.getAllItems();
+		modelAndView.setViewName("viewAllItems");
+		modelAndView.addObject("all", allItems);
+		return modelAndView;
+	}
 
 
 }

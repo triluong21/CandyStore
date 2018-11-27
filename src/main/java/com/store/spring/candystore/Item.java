@@ -1,13 +1,22 @@
 package com.store.spring.candystore;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="items")
 public class Item {
+	@Id 
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int itemid;
 	private String itemname;
 	private String itemcolor;
 	private double cost;
 	private int quantity;
 	private double retail;
-	
 	
 	
 	public Item() {
@@ -18,6 +27,16 @@ public class Item {
 	public int getItemid() {
 		return itemid;
 	}
+	
+	public Item(String itemname, String itemcolor, double cost, int quantity, double retail) {
+		super();
+		this.itemname = itemname;
+		this.itemcolor = itemcolor;
+		this.cost = cost;
+		this.quantity = quantity;
+		this.retail = retail;
+	}
+	
 	
 	public void setItemid(int itemid) {
 		this.itemid = itemid;
