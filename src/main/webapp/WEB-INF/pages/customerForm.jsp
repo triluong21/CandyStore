@@ -20,7 +20,7 @@
 	    <nav>
 		  <ul>
 			<li><a href = "">Home</a></li>
-		    <li><a href = "">Catalog</a></li>
+		    <li><a href = "viewItem.mvc">Catalog</a></li>
 		  </ul>
 		</nav>
 	  </section>
@@ -81,7 +81,7 @@
 	    <nav>
 		  <ul>
 			<li><a href = "">Home</a></li>
-		    <li><a href = "">Catalog</a></li>
+		    <li><a href = "viewItem.mvc">Catalog</a></li>
 		  </ul>
 		</nav>
 	</footer>
