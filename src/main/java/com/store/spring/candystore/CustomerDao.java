@@ -10,6 +10,7 @@ import javax.persistence.TypedQuery;
 public class CustomerDao {
 	EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("CandyStore");
 	
+	//to insert a new customer to the database
 	public void insertCustomer(Customer customerToAdd){
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
@@ -18,6 +19,7 @@ public class CustomerDao {
 		em.close();
 	}
 	
+	//to query the customer list to display it
 	public List<Customer> getAllCustomers() {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
@@ -27,6 +29,7 @@ public class CustomerDao {
 		return all;
 	}
 
+	//to query the items list to display it
 	public List<Item> getAllItems() {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
