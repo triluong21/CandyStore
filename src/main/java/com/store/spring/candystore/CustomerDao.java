@@ -28,12 +28,8 @@ public class CustomerDao {
 		List<Customer> all = typedQuery.getResultList();
 		return all;
 	}
-
-<<<<<<< HEAD
 	//to query the items list to display it
-=======
 	//View all item in Catalog page
->>>>>>> pr/5
 	public List<Item> getAllItems() {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
