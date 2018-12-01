@@ -11,7 +11,63 @@
 <title>Customer Entrance Handling</title>
 </head>
 <body>
+<<<<<<< HEAD
   <section id="container">
+=======
+<<<<<<< HEAD
+<h2>Customer Registration Form</h2>
+<mvc:form modelAttribute="customer" action="result.mvc">
+	<table>
+	    <tr>
+	        <td><mvc:label path="firstname">First Name</mvc:label></td>
+	        <td><mvc:input path="firstname" /></td>
+	        <td><mvc:errors path="firstname" cssClass="error" /></td>
+	    </tr>
+	    <tr>
+	        <td><mvc:label path="lastname">Last Name</mvc:label></td>
+	        <td><mvc:input path="lastname" /></td>
+	        <td><mvc:errors path="lastname" cssClass="error" /></td>
+	    </tr>
+	    <tr>
+	        <td><mvc:label path="address">Address</mvc:label></td>
+	        <td><mvc:input path="address" /></td>
+	        <td><mvc:errors path="address" cssClass="error" /></td>
+	    </tr>
+   	    <tr>
+	        <td><mvc:label path="city">City</mvc:label></td>
+	        <td><mvc:input path="city" /></td>
+	        <td><mvc:errors path="city" cssClass="error" /></td>
+	    </tr>
+		<tr>
+            <td><mvc:label path="state">State</mvc:label></td>
+            <td><mvc:input path="state" /></td>
+            <td><mvc:errors path="state" cssClass="error" /></td>
+        </tr>
+        <tr>
+	        <td><mvc:label path="zip">Zip</mvc:label></td>
+	        <td><mvc:input path="zip" /></td>
+	        <td><mvc:errors path="zip" cssClass="error" /></td>
+	    </tr>
+        <tr>
+            <td><mvc:label path="country">Country</mvc:label></td>
+            <td><mvc:select path="country" items="${countries}" /></td>
+        </tr>
+        <tr>
+            <td><mvc:label path="email">Email</mvc:label></td>
+            <td><mvc:input path="email" /></td>
+            <td><mvc:errors path="email" cssClass="error" /></td>
+        </tr>
+        <tr>
+	        <td colspan="2">
+                <input type="submit" value="Submit" />
+	        </td>
+	    </tr>
+	</table>  
+</mvc:form>
+<a href = "viewAll.mvc">View all Customers</a>
+=======
+  <section id="Container">
+>>>>>>> Working
     <header>
 	  <section id="title">
 	    <h1>Candy Store</h1>
@@ -85,6 +141,11 @@
 		  </ul>
 		</nav>
 	</footer>
+<<<<<<< HEAD
 </section>
+=======
+  </section>
+>>>>>>> 25984333cae485d7ac4a7d3e12bfe133a34a4dae
+>>>>>>> Working
 </body>
 </html>
