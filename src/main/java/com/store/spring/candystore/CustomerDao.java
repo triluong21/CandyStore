@@ -27,4 +27,26 @@ public class CustomerDao {
 		return all;
 	}
 
+	//View all item in Catalog page
+	public List<Item> getAllItems() {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		String q = "select u from Item u";
+		TypedQuery<Item> typedQuery = em.createQuery(q, Item.class);
+		List<Item> all = typedQuery.getResultList();
+		return all;
+	}
+
+	//View all selected item
+	public List<Item> getAllSelectedItems(Item itemidpara) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		String q = "select u from Item u where u.itemid = :selectedId";
+		TypedQuery<Item> typedQuery = em.createQuery(q, Item.class);
+		typedQuery.setParameter("selectedId", itemidpara.getItemid());
+		List<Item> all = typedQuery.getResultList();
+		return all;
+	}
+
+	
 }
