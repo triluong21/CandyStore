@@ -29,17 +29,30 @@ public class CustomerDao {
 		return all;
 	}
 
+<<<<<<< HEAD
 	//to query the items list to display it
+=======
+	//View all item in Catalog page
+>>>>>>> pr/5
 	public List<Item> getAllItems() {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		System.out.println("before query built");
 		String q = "select u from Item u";
-		System.out.println("after query built");
-		System.out.println(q);
 		TypedQuery<Item> typedQuery = em.createQuery(q, Item.class);
 		List<Item> all = typedQuery.getResultList();
 		return all;
 	}
 
+	//View all selected item
+	public List<Item> getAllSelectedItems(Item itemidpara) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		String q = "select u from Item u where u.itemid = :selectedId";
+		TypedQuery<Item> typedQuery = em.createQuery(q, Item.class);
+		typedQuery.setParameter("selectedId", itemidpara.getItemid());
+		List<Item> all = typedQuery.getResultList();
+		return all;
+	}
+
+	
 }
