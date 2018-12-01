@@ -12,8 +12,11 @@
 </head>
 <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <section id="container">
 =======
+=======
+>>>>>>> Working
 <<<<<<< HEAD
 <h2>Customer Registration Form</h2>
 <mvc:form modelAttribute="customer" action="result.mvc">
@@ -67,6 +70,12 @@
 <a href = "viewAll.mvc">View all Customers</a>
 =======
   <section id="Container">
+<<<<<<< HEAD
+>>>>>>> Working
+=======
+=======
+  <section id="container">
+>>>>>>> pr/5
 >>>>>>> Working
     <header>
 	  <section id="title">
@@ -142,10 +151,18 @@
 		</nav>
 	</footer>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </section>
 =======
   </section>
 >>>>>>> 25984333cae485d7ac4a7d3e12bfe133a34a4dae
+>>>>>>> Working
+=======
+  </section>
+>>>>>>> 25984333cae485d7ac4a7d3e12bfe133a34a4dae
+=======
+</section>
+>>>>>>> pr/5
 >>>>>>> Working
 </body>
 </html>
