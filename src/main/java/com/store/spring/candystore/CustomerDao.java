@@ -28,7 +28,7 @@ public class CustomerDao {
 		List<Customer> all = typedQuery.getResultList();
 		return all;
 	}
-	//to query the items list to display it
+	
 	//View all item in Catalog page
 	public List<Item> getAllItems() {
 		EntityManager em = emfactory.createEntityManager();
