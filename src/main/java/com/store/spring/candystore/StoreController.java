@@ -96,6 +96,7 @@ public class StoreController {
 		return modelAndView;
 	}
 
+	// View the catalog
 	@RequestMapping(value = "/viewItem")
 	public ModelAndView viewItem( ){
 		ModelAndView modelAndView = new ModelAndView();
@@ -105,5 +106,24 @@ public class StoreController {
 		return modelAndView;
 	}
 
+	//View Selected item
+	@RequestMapping(value = "/viewSelectedItem")
+	public ModelAndView viewSelectedItem(@ModelAttribute("item") Item item, BindingResult result ){
+		ModelAndView modelAndView = new ModelAndView();
+		
+		//validates that a record has been selected
+		if (item.getItemid() == 0) {
+		result.rejectValue("itemid", "error.itemid");
+		List<Item> allSelectedItems = dao.getAllSelectedItems(item);
+		modelAndView.setViewName("orderItem");
+		modelAndView.addObject("all", allSelectedItems);
+		return modelAndView;
+		}
+		
+		List<Item> allSelectedItems = dao.getAllSelectedItems(item);
+		modelAndView.setViewName("orderItem");
+		modelAndView.addObject("all", allSelectedItems);
+		return modelAndView;
+	}
 
 }

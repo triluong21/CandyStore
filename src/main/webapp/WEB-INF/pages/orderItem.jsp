@@ -13,16 +13,17 @@
 	color:navy;
 }
 </style>
-<title>Candy Catalog</title>
+<title>Order Item</title>
 </head>
 <body>
-<h1>Candy Catalog</h1>
-	<mvc:form name="catalogForm" modelAttribute="item" action="viewSelectedItem.mvc">
+<h1>Order Item</h1>
+	<mvc:form name="orderItemForm" modelAttribute="item" action="writeOrder.mvc">
 		<c:forEach items="${all}" var="item">
 			<div class="tablelist">
 				<table>
 					<tr>
-						<td><input type="radio" name="itemid" value="${item.itemid}"/></td>
+					    <td><input type="text" name="orderquanity"/></td>
+						<td><input type="text" name="id" value="${item.itemid}"/></td>
 						<td><input type="text" name="iname" value="${item.itemname}"/></td>
 						<td><input type="text" name="icolor" value="${item.itemcolor}"/></td>
 						<td><input type="text" name="iretail" value="${item.retail}"/></td>
@@ -31,8 +32,8 @@
 			</div>
 		</c:forEach>
 		<br />
-		<input type="submit" value= 'Select Item' />
-		<td><mvc:errors path="id" cssClass="error" /></td>
+		<input type="submit" value= 'Place Order' />
+		
 	</mvc:form>
 	<a href="form.mvc">Add a new customer</a>
 </body>
