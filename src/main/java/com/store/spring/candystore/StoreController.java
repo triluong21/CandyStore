@@ -67,6 +67,16 @@ public class StoreController {
 	        result.rejectValue("email", "error.email");
 	        error = true;
 	    }
+		
+		if(customer.getUsername().isEmpty()){
+			result.rejectValue("username", "error.username");
+			error = true;
+	    }
+		
+		if(customer.getPassword().isEmpty()){
+			result.rejectValue("password", "error.password");
+			error = true;
+	    }
 			     
 		if(error) {
 			modelAndView.setViewName("customerForm");
@@ -123,6 +133,47 @@ public class StoreController {
 		List<Item> allSelectedItems = dao.getAllSelectedItems(item);
 		modelAndView.setViewName("orderItem");
 		modelAndView.addObject("all", allSelectedItems);
+		return modelAndView;
+	}
+	
+	//login screen
+	@RequestMapping(value = "/login")
+	public ModelAndView customerLogin( ){
+		ModelAndView modelAndView = new ModelAndView( );
+		modelAndView.setViewName("login");
+		modelAndView.addObject("customer", new Customer( ));
+		
+		return modelAndView;
+	}
+	
+	
+	//login effect
+	@RequestMapping(value = "/loginAttempt")
+	public ModelAndView customerLoginAttempt(@ModelAttribute("customer") Customer customer, BindingResult result){
+		ModelAndView modelAndView = new ModelAndView( );
+		
+		boolean error = false;
+		
+		if(customer.getUsername().isEmpty()){
+			result.rejectValue("username", "error.username");
+			error = true;
+	    }
+		
+		if(customer.getPassword().isEmpty()){
+			result.rejectValue("password", "error.password");
+			error = true;
+	    }
+		
+		if(error) {
+			modelAndView.setViewName("login");
+			return modelAndView;
+		}
+		
+	
+		Customer user = dao.usernameLogin(customer);
+		modelAndView.setViewName("customerLogged");
+		modelAndView.addObject("user", user);
+		
 		return modelAndView;
 	}
 

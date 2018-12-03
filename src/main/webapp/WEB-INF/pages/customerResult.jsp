@@ -42,6 +42,10 @@
             <td>Email</td>
             <td>${c.email}</td>
         </tr>
+        <tr>
+            <td>Username</td>
+            <td>${c.username}</td>
+        </tr>
         </table>
 <a href = "viewAll.mvc">View all Customers</a>
 </body>

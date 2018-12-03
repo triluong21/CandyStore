@@ -34,6 +34,5 @@
 		<input type="submit" value= 'Select Item' />
 		<td><mvc:errors path="id" cssClass="error" /></td>
 	</mvc:form>
-	<a href="form.mvc">Add a new customer</a>
 </body>
 </html>
