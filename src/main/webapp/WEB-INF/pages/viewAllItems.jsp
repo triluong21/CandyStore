@@ -44,9 +44,6 @@
 		<input type="submit" value= 'Select Item' />
 		<td><mvc:errors path="id" cssClass="error" /></td>
 	</mvc:form>
-<<<<<<< HEAD
-=======
-	<a href="form.mvc">Add a new customer</a>
   </section>
   <footer>
 	<nav>
@@ -57,6 +54,5 @@
 	</nav>
   </footer>
 </section>
->>>>>>> 209a7b25eaf4697653d415117a83af7b6fe4a78b
 </body>
 </html>
