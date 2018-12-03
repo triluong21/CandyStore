@@ -17,16 +17,17 @@
 </head>
 <body>
 <h1>Order Item</h1>
-	<mvc:form name="orderItemForm" modelAttribute="item" action="writeOrder.mvc">
+	<mvc:form name="orderItemForm" modelAttribute="item" action="writeorder.mvc">
 		<c:forEach items="${all}" var="item">
 			<div class="tablelist">
 				<table>
 					<tr>
-					    <td><input type="text" name="orderquanity"/></td>
-						<td><input type="text" name="id" value="${item.itemid}"/></td>
-						<td><input type="text" name="iname" value="${item.itemname}"/></td>
-						<td><input type="text" name="icolor" value="${item.itemcolor}"/></td>
-						<td><input type="text" name="iretail" value="${item.retail}"/></td>
+
+					    <td><mvc:input path="quantity" type="text" name="orderquanity"/></td>
+					    <td><mvc:input path="itemid" type="text" name="id" value="${item.itemid}"/></td>
+						<td><mvc:input path="itemname" type="text" name="iname" value="${item.itemname}"/></td>
+						<td><mvc:input path="itemcolor" type="text" name="icolor" value="${item.itemcolor}"/></td>
+						<td><mvc:input path="retail" type="text" name="iretail" value="${item.retail}"/></td>
 					</tr>
 				</table>
 			</div>

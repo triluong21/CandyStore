@@ -128,4 +128,13 @@ public class StoreController {
 		return modelAndView;
 	}
 
+	@RequestMapping(value = "/writeorder")
+	public ModelAndView processOrder(@ModelAttribute("orderitem") Orderitem orderitem, BindingResult result){
+		ModelAndView modelAndView = new ModelAndView();
+		System.out.println(orderitem);
+		dao.writeOrder(orderitem);
+		//modelAndView.setViewName("customerResult");
+		modelAndView.addObject("c", orderitem);
+		return modelAndView;
+	}
 }

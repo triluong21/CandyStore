@@ -45,7 +45,17 @@ public class CustomerDao {
 		TypedQuery<Item> typedQuery = em.createQuery(q, Item.class);
 		typedQuery.setParameter("selectedId", itemidpara.getItemid());
 		List<Item> all = typedQuery.getResultList();
-		return all;
+		return all; 
+	}
+
+	//write order
+	public void writeOrder(Orderitem orderitemToAdd) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		em.persist(orderitemToAdd);
+		em.getTransaction().commit();
+		em.close();
+		
 	}
 
 	

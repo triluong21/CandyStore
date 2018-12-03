@@ -4,6 +4,7 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>com.store.spring.candystore.Customer</class>
 		<class>com.store.spring.candystore.Item</class>
+		<class>com.store.spring.candystore.Orderitem</class>
 		<validation-mode>AUTO</validation-mode>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
