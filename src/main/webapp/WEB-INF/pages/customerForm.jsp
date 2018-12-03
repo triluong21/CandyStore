@@ -69,6 +69,16 @@
                 <td><mvc:errors path="email" cssClass="error" /></td>
             </tr>
             <tr>
+                <td><mvc:label path="username">Username</mvc:label></td>
+                <td><mvc:input path="username" /></td>
+                <td><mvc:errors path="username" cssClass="error" /></td>
+            </tr>
+            <tr>
+                <td><mvc:label path="password">Password</mvc:label></td>
+                <td><mvc:input path="password" /></td>
+                <td><mvc:errors path="password" cssClass="error" /></td>
+            </tr>
+            <tr>
     	        <td colspan="2">
                     <input type="submit" value="Submit" />
     	        </td>

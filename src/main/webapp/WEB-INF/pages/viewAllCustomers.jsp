@@ -43,6 +43,10 @@
 				<td>Email</td>
 				<td>${customer.email}</td>
 			</tr>
+			<tr>
+            	<td>Username</td>
+            	<td>${customer.username}</td>
+        	</tr>
 
 		</table>
 		<br />
