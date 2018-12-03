@@ -125,5 +125,12 @@ public class StoreController {
 		modelAndView.addObject("all", allSelectedItems);
 		return modelAndView;
 	}
-
+	
+	// Homepage
+	@RequestMapping(value = "/home")
+	public ModelAndView home( ){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("home");
+		return modelAndView;
+	}
 }

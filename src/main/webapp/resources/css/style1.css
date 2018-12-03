@@ -1,19 +1,19 @@
 /*
 Colors:
 
-Darker Brown:#301800
+Border      :#c9c9e5
 
-Dark Brown:  #683500
+section back:#b5fcf0
 
-Light Brown: #8325ba
+Background:  #fff2fe
 
-Caramel:     #e07200
+Caramel:     #ffb9d5
 
 White:       #FFFFFF
 
 Black:       #000000
 
-Accent:      #003200
+Accent:      #c9c9e5
 */
 
 *{
@@ -22,7 +22,7 @@ Accent:      #003200
 }
 
 body{
-	background-color:#8325ba;
+	background-color:#fff2fe;
 	font: normal normal normal 1em/2em Chicago, sans-serif;
 }
 
@@ -35,14 +35,14 @@ XXXXXXXXXXXXXXXXXXXXXXXXX*/
 #container{
 	width: 90%;
 	margin: 0 auto;
-	border: solid thick #301800;
+	border: solid thick #c9c9e5;
 	padding:1% 0 1% 0;
-	background-color: #683500;
+	background-color: #b5fcf0;
 }
 
 header{
 	margin-top:2%;
-	border-bottom: solid thick #301800;
+	border-bottom: solid thick #c9c9e5;
 }
 
 #main{
@@ -52,13 +52,13 @@ header{
 }
 
 footer{
-	border-top: solid thick #301800;
+	border-top: solid thick #c9c9e5;
 	width:100%;
 	margin:5% auto;
 	padding:0.5em 0;
 	clear:both;
 	text-align:center;
-	color:#e07200;
+	color:#ffb9d5;
 }
 
 /*XXXXXXXXXXXXXXXXXXXXXXXXX  
@@ -90,12 +90,24 @@ nav ul li a {
 	width:10%;
 	padding:5px;
 	margin:2px;
-	color:#e07200;
+	color:#ffb9d5;
 	text-decoration:none;
 }
 
 nav ul li a:hover{
-	background:#e07200;
-	color:#683500;
+	background:#ffb9d5;
+	color:#b5fcf0;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXX  
+
+           MISC  
+
+XXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+.tablelist table{
+	border: none;
+	font-family: arial;
+	color:navy;
 }
 
