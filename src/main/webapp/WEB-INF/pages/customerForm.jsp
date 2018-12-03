@@ -19,7 +19,7 @@
 	  <section id="navbar">
 	    <nav>
 		  <ul>
-			<li><a href = "">Home</a></li>
+			<li><a href = "home.mvc">Home</a></li>
 		    <li><a href = "viewItem.mvc">Catalog</a></li>
 		  </ul>
 		</nav>
@@ -90,7 +90,7 @@
 	<footer>
 	    <nav>
 		  <ul>
-			<li><a href = "">Home</a></li>
+			<li><a href = "home.mvc">Home</a></li>
 		    <li><a href = "viewItem.mvc">Catalog</a></li>
 		  </ul>
 		</nav>

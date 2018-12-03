@@ -136,6 +136,7 @@ public class StoreController {
 		return modelAndView;
 	}
 	
+<<<<<<< HEAD
 	//login screen
 	@RequestMapping(value = "/login")
 	public ModelAndView customerLogin( ){
@@ -177,4 +178,13 @@ public class StoreController {
 		return modelAndView;
 	}
 
+=======
+	// Homepage
+	@RequestMapping(value = "/home")
+	public ModelAndView home( ){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("home");
+		return modelAndView;
+	}
+>>>>>>> 209a7b25eaf4697653d415117a83af7b6fe4a78b
 }

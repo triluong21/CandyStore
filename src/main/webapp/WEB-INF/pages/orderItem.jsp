@@ -5,17 +5,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<style>
-.tablelist table{
-	border: none;
-	font-family: arial;
-	color:navy;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style1.css"/>">
+<script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
+<script src="<c:url value="/resources/js/main.js" />"></script>
 <title>Order Item</title>
 </head>
 <body>
+<section id="container">
+  <header>
+	<section id="title">
+	  <h1>Candy Store</h1>
+	</section>
+	<section id="navbar">
+	  <nav>
+		<ul>
+		  <li><a href = "home.mvc">Home</a></li>
+		  <li><a href = "viewItem.mvc">Catalog</a></li>
+		</ul>
+	  </nav>
+	</section>
+  </header>
+  <section id="main">
 <h1>Order Item</h1>
 	<mvc:form name="orderItemForm" modelAttribute="item" action="writeOrder.mvc">
 		<c:forEach items="${all}" var="item">
@@ -36,5 +46,15 @@
 		
 	</mvc:form>
 	<a href="form.mvc">Add a new customer</a>
+  </section>
+  <footer>
+	<nav>
+	  <ul>
+	    <li><a href = "home.mvc">Home</a></li>
+		<li><a href = "viewItem.mvc">Catalog</a></li>
+	  </ul>
+	</nav>
+  </footer>
+</section>
 </body>
 </html>
