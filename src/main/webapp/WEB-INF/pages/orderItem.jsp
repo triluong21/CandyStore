@@ -42,10 +42,8 @@
 			</div>
 		</c:forEach>
 		<br />
-		<input type="submit" value= 'Place Order' />
-		
+		<input type="submit" value= 'Place Order' />		
 	</mvc:form>
-	<a href="form.mvc">Add a new customer</a>
   </section>
   <footer>
 	<nav>
