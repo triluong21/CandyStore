@@ -20,37 +20,42 @@
 	  <nav>
 		<ul>
 		  <li><a href = "home.mvc">Home</a></li>
-		  <li><a href = "viewItem.mvc">Catalog</a></li>
+		  <li><a href = "viewItemCont.mvc">Catalog</a></li>
 		</ul>
 	  </nav>
 	</section>
   </header>
   <section id="main">
-<h1>Candy Catalog</h1>
+<h1>Order</h1>
 <mvc:label path="tempCustomer" name="tempCustomer" modelAttribute="tempCustomer" />
-	<mvc:form name="catalogForm" modelAttribute="item" action="viewSelectedItem.mvc">
-		<c:forEach items="${all}" var="item">
+<mvc:form name="orderItemForm" modelAttribute="tempitem" action="viewItemCont.mvc">
+		<c:forEach items="${all}" var="orderitem">
 			<div class="tablelist">
 				<table>
-					<tr>
-						<td><input type="radio" name="itemid" value="${item.itemid}"/></td>
-						<td><input type="text" name="itemname" value="${item.itemname}"/></td>
-						<td><input type="text" name="itemcolor" value="${item.itemcolor}"/></td>
-						<td><input type="text" name="retail" value="${item.retail}"/></td>
-					</tr>
+				<tr>
+					<td>Item ID: </td>
+					<td>${orderitem.itemid}</td>
+					<td>Item: </td>
+					<td>${orderitem.itemname}</td>
+					<td>Quantity: </td>
+					<td>${orderitem.quantity}</td>
+					<td>Total cost: </td>
+					<td>${orderitem.totalcost}</td>
+				</tr>
 				</table>
 			</div>
 		</c:forEach>
-		<br />
-		<input type="submit" value= 'Select Item' />
-		<td><mvc:errors path="non-id" cssClass="error" /></td>
+				<br />
+		<input type="submit" value= 'Add another item' />		
 	</mvc:form>
+		<a href = "form.mvc">Submit Total Order.</a>
+		<br />
   </section>
   <footer>
 	<nav>
 	  <ul>
 	    <li><a href = "home.mvc">Home</a></li>
-		<li><a href = "viewItem.mvc">Catalog</a></li>
+		<li><a href = "viewItemCont.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
   </footer>

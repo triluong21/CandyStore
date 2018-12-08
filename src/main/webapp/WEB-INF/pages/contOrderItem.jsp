@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style1.css"/>">
 <script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/main.js" />"></script>
-<title>Candy Catalog</title>
+<title>Order Item</title>
 </head>
 <body>
 <section id="container">
@@ -20,37 +20,39 @@
 	  <nav>
 		<ul>
 		  <li><a href = "home.mvc">Home</a></li>
-		  <li><a href = "viewItem.mvc">Catalog</a></li>
+		  <li><a href = "viewItemCont.mvc">Catalog</a></li>
 		</ul>
 	  </nav>
 	</section>
   </header>
   <section id="main">
-<h1>Candy Catalog</h1>
-<mvc:label path="tempCustomer" name="tempCustomer" modelAttribute="tempCustomer" />
-	<mvc:form name="catalogForm" modelAttribute="item" action="viewSelectedItem.mvc">
+  <mvc:label path="tempCustomer" name="tempCustomer" modelAttribute="tempCustomer" />
+  <mvc:label path="orderNumber" name="orderNumber" modelAttribute="orderNumber" />
+<h1>Order Item</h1>
+	<mvc:form name="orderItemForm" modelAttribute="tempitem" action="writeOrder.mvc">
 		<c:forEach items="${all}" var="item">
 			<div class="tablelist">
 				<table>
 					<tr>
-						<td><input type="radio" name="itemid" value="${item.itemid}"/></td>
+					    <td><input type="text" name="quantity"/></td>
+						<td><input type="text" name="itemid" value="${item.itemid}"/></td>
 						<td><input type="text" name="itemname" value="${item.itemname}"/></td>
 						<td><input type="text" name="itemcolor" value="${item.itemcolor}"/></td>
 						<td><input type="text" name="retail" value="${item.retail}"/></td>
+						<td><mvc:errors path="quantity" cssClass="error" /></td>
 					</tr>
 				</table>
 			</div>
 		</c:forEach>
 		<br />
-		<input type="submit" value= 'Select Item' />
-		<td><mvc:errors path="non-id" cssClass="error" /></td>
+		<input type="submit" value= 'Place Order' />		
 	</mvc:form>
   </section>
   <footer>
 	<nav>
 	  <ul>
 	    <li><a href = "home.mvc">Home</a></li>
-		<li><a href = "viewItem.mvc">Catalog</a></li>
+		<li><a href = "viewItemCont.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
   </footer>

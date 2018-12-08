@@ -26,17 +26,21 @@
 	</section>
   </header>
   <section id="main">
+  <mvc:label path="tempCustomer" name="tempCustomer" modelAttribute="tempCustomer" />
+  <mvc:label path="orderNumber" name="orderNumber" modelAttribute="orderNumber" />
+  
 <h1>Order Item</h1>
-	<mvc:form name="orderItemForm" modelAttribute="item" action="writeOrder.mvc">
+	<mvc:form name="orderItemForm" modelAttribute="tempitem" action="writeOrder.mvc">
 		<c:forEach items="${all}" var="item">
 			<div class="tablelist">
 				<table>
 					<tr>
-					    <td><input type="text" name="orderquanity"/></td>
-						<td><input type="text" name="id" value="${item.itemid}"/></td>
-						<td><input type="text" name="iname" value="${item.itemname}"/></td>
-						<td><input type="text" name="icolor" value="${item.itemcolor}"/></td>
-						<td><input type="text" name="iretail" value="${item.retail}"/></td>
+					    <td><input type="text" name="quantity"/></td>
+						<td><input type="text" name="itemid" value="${item.itemid}"/></td>
+						<td><input type="text" name="itemname" value="${item.itemname}"/></td>
+						<td><input type="text" name="itemcolor" value="${item.itemcolor}"/></td>
+						<td><input type="text" name="retail" value="${item.retail}"/></td>
+						<td><mvc:errors path="quantity" cssClass="error" /></td>
 					</tr>
 				</table>
 			</div>
@@ -49,7 +53,7 @@
 	<nav>
 	  <ul>
 	    <li><a href = "home.mvc">Home</a></li>
-		<li><a href = "viewItem.mvc">Catalog</a></li>
+		<li><a href = "viewItemCont.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
   </footer>

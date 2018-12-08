@@ -11,6 +11,21 @@
 <title>Login</title>
 </head>
     <body>
+    <section id="container">
+  <header>
+	<section id="title">
+	  <h1>Candy Store</h1>
+	</section>
+	<section id="navbar">
+	  <nav>
+		<ul>
+		  <li><a href = "home.mvc">Home</a></li>
+		  <li><a href = "viewItem.mvc">Catalog</a></li>
+		</ul>
+	  </nav>
+	</section>
+  </header>
+  <section id="main">
         <mvc:form modelAttribute="customer" action="loginAttempt.mvc" >
         <table>
         <tr>
@@ -30,6 +45,16 @@
     	    </tr>
         </table>
         </mvc:form>
+        </section>
+  <footer>
+	<nav>
+	  <ul>
+	    <li><a href = "home.mvc">Home</a></li>
+		<li><a href = "viewItemCont.mvc">Catalog</a></li>
+	  </ul>
+	</nav>
+  </footer>
+</section>
     </body>
 
 </html>
