@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style1.css"/>">
 <script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/main.js" />"></script>
-<title>Candy Order</title>
+<title>Candy Catalog</title>
 </head>
 <body>
 <section id="container">
@@ -26,13 +26,14 @@
 	</section>
   </header>
   <section id="main">
-<h1>Current Order</h1>
-<mvc:form name="orderItemForm" modelAttribute="orderitem" action="delete.mvc">
+<h1>Candy Catalog</h1>
+<mvc:label path="tempCustomer" name="tempCustomer" modelAttribute="tempCustomer" />
+	<mvc:form name="orderItemForm" modelAttribute="orderitem" action="delete.mvc">
 		<c:forEach items="${all}" var="orderitem">
 			<div class="tablelist">
 				<table>
 				<tr>
-					<td><input type="radio" name="orderitemid" value="${orderitem.orderitemid}"/></td>
+				    <td><input type="radio" name="orderitemid" value="${orderitem.orderitemid}"/></td>
 					<td>Item ID: </td>
 					<td>${orderitem.itemid}</td>
 					<td>Item: </td>
@@ -46,12 +47,8 @@
 			</div>
 		</c:forEach>
 				<br />
-		<input type="submit" value= 'Delete Item' />
-		<mvc:errors path="orderitemid" cssClass="error" />			
+		<input type="submit" value= 'Delete this Item' />		
 	</mvc:form>
-		<a href = "viewItemCont.mvc">Add another item.</a>
-		<a href = "form.mvc">Submit Total Order.</a>
-		<br />
   </section>
   <footer>
 	<nav>

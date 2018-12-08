@@ -58,6 +58,22 @@ public class CustomerDao {
 		return all;
 	}
 	
+	//remove a item from the users order
+	public void deleteOrderItem(OrderItem itemToDelete) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		String q = "select e from OrderItem e where e.orderitemid = :selectedId";
+		TypedQuery<OrderItem> typedQuery = em.createQuery(q, OrderItem.class);
+		typedQuery.setParameter("selectedId", itemToDelete.getOrderitemid());
+		
+		typedQuery.setMaxResults(1);
+		OrderItem field = typedQuery.getSingleResult();
+		em.remove(field);
+		em.getTransaction().commit();
+		em.close();
+	}
+
+	
 	//View all items in the catalog page
 	public List<Item> getAllItems() {
 		EntityManager em = emfactory.createEntityManager();

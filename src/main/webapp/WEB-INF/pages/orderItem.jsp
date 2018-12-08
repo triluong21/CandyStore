@@ -40,13 +40,13 @@
 						<td><input type="text" name="itemname" value="${item.itemname}"/></td>
 						<td><input type="text" name="itemcolor" value="${item.itemcolor}"/></td>
 						<td><input type="text" name="retail" value="${item.retail}"/></td>
-						<td><mvc:errors path="quantity" cssClass="error" /></td>
 					</tr>
 				</table>
 			</div>
 		</c:forEach>
 		<br />
-		<input type="submit" value= 'Place Order' />		
+		<input type="submit" value= 'Place Order' />
+		<mvc:errors path="quantity" cssClass="error" />		
 	</mvc:form>
   </section>
   <footer>

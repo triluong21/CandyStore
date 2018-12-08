@@ -91,9 +91,7 @@ public class StoreController {
 			return modelAndView;
 		}
 
-System.out.println("made it to above dao");
 		dao.insertCustomer(tempCost, tempO, tempC, customer);
-		System.out.println("made it past dao");
 		modelAndView.setViewName("customerResult");
 		modelAndView.addObject("customer", customer);
 		return modelAndView;
@@ -168,14 +166,15 @@ System.out.println("made it to above dao");
 		tempOrder.setCustomerid(tempC.getCustomerid());
 		dao.assignOrderNumber(tempOrder);
 		tempO.setOrderid(tempOrder.getOrderid());
-		System.out.println("this is assigned customer in first time orderitem" + tempOrder.getOrderid());
+		System.out.println("this is assigned order number in first time orderitem" + tempOrder.getOrderid());
 		
 		//validates that a record has been selected
+		System.out.println("Item ID" + item.getItemid());
 		if (item.getItemid() == 0) {
-		result.rejectValue("itemid", "error.itemid");
-		List<Item> allSelectedItems = dao.getAllSelectedItems(item);
-		modelAndView.setViewName("orderItem");
-		modelAndView.addObject("all", allSelectedItems);
+		result.rejectValue("itemid", "error.erroritemid");
+		List<Item> allItems = dao.getAllItems();
+		modelAndView.setViewName("contViewAllItems");
+		modelAndView.addObject("all", allItems);
 		modelAndView.addObject("tempCustomer", tempCustomer);
 		return modelAndView;
 		}
@@ -194,10 +193,10 @@ System.out.println("made it to above dao");
 		
 		//validates that a record has been selected
 		if (item.getItemid() == 0) {
-		result.rejectValue("itemid", "error.itemid");
-		List<Item> allSelectedItems = dao.getAllSelectedItems(item);
-		modelAndView.setViewName("contOrderItem");
-		modelAndView.addObject("all", allSelectedItems);
+		result.rejectValue("itemid", "error.erroritemid");
+		List<Item> allItems = dao.getAllItems();
+		modelAndView.setViewName("contViewAllItems");
+		modelAndView.addObject("all", allItems);
 		modelAndView.addObject("tempCustomer", tempCustomer);
 		modelAndView.addObject("orderNumber", tempOrder);
 		return modelAndView;
@@ -213,12 +212,25 @@ System.out.println("made it to above dao");
 	@RequestMapping(value = "/writeOrder")
 	public ModelAndView writeCustomerOrder(@ModelAttribute("orderNumber") Order tempOrder, @ModelAttribute("tempCustomer") Customer tempCustomer, @ModelAttribute("tempitem") Item item, BindingResult result) {
 		ModelAndView modelAndView = new ModelAndView();
-		System.out.println("this is the Customer number and Order number inside /writeorder" + tempOrder.getOrderid() + " " + tempCustomer.getCustomerid());
 		//validation of inputs
+		int tQ;
 		boolean error = false;
-
-		if(item.getQuantity() < 1){
-		result.rejectValue("orderquantity", "error.quantity");
+		try {
+		    tQ = Integer.parseInt(item.getQuantity());
+		}
+		catch (Exception e){
+			result.rejectValue("quantity", "error.quantity");
+			List<Item> allSelectedItems = dao.getAllSelectedItems(item);
+			modelAndView.setViewName("contOrderItem");
+			modelAndView.addObject("all", allSelectedItems);
+			modelAndView.addObject("tempCustomer", tempCustomer);
+			modelAndView.addObject("orderNumber", tempOrder);
+			return modelAndView;
+			
+		}
+		
+		if(tQ == 0){
+		result.rejectValue("quantity", "error.quantity");
 		error = true;
 		}
 		
@@ -235,8 +247,8 @@ System.out.println("made it to above dao");
 		oItem.setOrderid(tempO.getOrderid());
 		oItem.setItemid(item.getItemid());
 		oItem.setItemname(item.getItemname());
-		oItem.setTotalcost(dao.getTotalProdCost(item.getQuantity(), item));
-		oItem.setQuantity(item.getQuantity());
+		oItem.setTotalcost(dao.getTotalProdCost(Integer.parseInt(item.getQuantity()), item));
+		oItem.setQuantity(Integer.parseInt(item.getQuantity()));
 		oItem.setPaid(0.0);
 		tempCost = tempCost + oItem.getTotalcost();
 		//persists the item to the customers order.
@@ -247,6 +259,28 @@ System.out.println("made it to above dao");
 		modelAndView.addObject("all", allOrderItems);
 		return modelAndView;
 	}
+	
+	//delete an item from the users order list
+	@RequestMapping(value = "/delete")
+	public ModelAndView delete(@ModelAttribute("orderitem") OrderItem oi, BindingResult result ){
+		ModelAndView modelAndView = new ModelAndView();
+		
+		//validates that a record has been selected
+		if (oi.getOrderitemid() == 0) {
+		result.rejectValue("orderitemid", "error.orderitemiderror");
+		List<OrderItem> allOrderItems = dao.getAllOrderItems(tempO);
+		modelAndView.setViewName("viewOrder");
+		modelAndView.addObject("all", allOrderItems);
+		return modelAndView;
+		}
+		
+		dao.deleteOrderItem(oi);
+		List<OrderItem> allOrderItems = dao.getAllOrderItems(tempO);
+		modelAndView.setViewName("viewOrder");
+		modelAndView.addObject("all", allOrderItems);
+		return modelAndView;
+	}
+
 	
 	@RequestMapping(value="/viewOrder")
 	public ModelAndView viewOrder() {

@@ -43,7 +43,7 @@
 		</c:forEach>
 		<br />
 		<input type="submit" value= 'Select Item' />
-		<td><mvc:errors path="non-id" cssClass="error" /></td>
+		<td><mvc:errors path="erroritemid" cssClass="error" /></td>
 	</mvc:form>
   </section>
   <footer>
