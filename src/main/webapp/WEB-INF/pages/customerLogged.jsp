@@ -60,9 +60,9 @@
             <td>${user.username}</td>
         </tr>
         </table>
+		<table>
         <c:forEach items="${all}" var="orderitem">
 			<div class="tablelist">
-				<table>
 				<tr>
 					<td>Item ID</td>
 					<td>${orderitem.itemid}</td>
@@ -73,9 +73,9 @@
 					<td>Total cost:</td>
 					<td>${orderitem.totalcost}</td>
 				</tr>
-				</table>
 			</div>
 		</c:forEach>
+		</table>
         <table>
         <tr>
         <td>Order Total Cost:</td>

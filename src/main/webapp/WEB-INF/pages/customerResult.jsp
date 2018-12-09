@@ -68,7 +68,7 @@
         </tr>
          <tr>
     	        <td colspan="2">
-                    <input type="submit" value="Complete Order" />
+                    <input type="submit" value="Confirm" />
     	        </td>
     	    </tr>
         </table>

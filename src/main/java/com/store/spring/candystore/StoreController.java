@@ -25,6 +25,10 @@ public class StoreController {
 	@RequestMapping(value = "/form")
 	public ModelAndView customer(@ModelAttribute("customer") Customer customer){
 		ModelAndView modelAndView = new ModelAndView( );
+		boolean error = false;
+		
+		
+		
 		modelAndView.setViewName("customerForm");
 		modelAndView.addObject("customer", customer);
 		modelAndView.addObject("countries", countries);
@@ -64,6 +68,11 @@ public class StoreController {
 	        result.rejectValue("state", "error.state");
 	        error = true;
 	    }
+		
+		if((customer.getState().length()) > 2) {
+			result.rejectValue("state", "error.state");
+			error = true;
+		}
 
 		if(customer.getZip().isEmpty()){
 	        result.rejectValue("zip", "error.zip");

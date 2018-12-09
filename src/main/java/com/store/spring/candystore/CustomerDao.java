@@ -38,7 +38,7 @@ public class CustomerDao {
 			tempCost = tempCost + 5.50;
 		} else if (customerToAdd.getCountry().contentEquals("Canada")) {
 			order.setShipcost(10.75);
-			tempCost = tempCost + 5.50;
+			tempCost = tempCost + 10.75;
 		} else {
 			order.setShipcost(7.50);
 			tempCost = tempCost + 7.50;
