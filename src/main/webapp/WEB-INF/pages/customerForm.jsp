@@ -19,7 +19,7 @@
 	  <section id="navbar">
 	    <nav>
 		  <ul>
-			<li><a href = "">Home</a></li>
+			<li><a href = "home.mvc">Home</a></li>
 		    <li><a href = "viewItem.mvc">Catalog</a></li>
 		  </ul>
 		</nav>
@@ -69,18 +69,27 @@
                 <td><mvc:errors path="email" cssClass="error" /></td>
             </tr>
             <tr>
+                <td><mvc:label path="username">Username</mvc:label></td>
+                <td><mvc:input path="username" /></td>
+                <td><mvc:errors path="username" cssClass="error" /></td>
+            </tr>
+            <tr>
+                <td><mvc:label path="password">Password</mvc:label></td>
+                <td><mvc:input path="password" /></td>
+                <td><mvc:errors path="password" cssClass="error" /></td>
+            </tr>
+            <tr>
     	        <td colspan="2">
                     <input type="submit" value="Submit" />
     	        </td>
     	    </tr>
     	</table>
     </mvc:form>
-    <a href = "viewAll.mvc">View all Customers</a>
   </section>
 	<footer>
 	    <nav>
 		  <ul>
-			<li><a href = "">Home</a></li>
+			<li><a href = "home.mvc">Home</a></li>
 		    <li><a href = "viewItem.mvc">Catalog</a></li>
 		  </ul>
 		</nav>

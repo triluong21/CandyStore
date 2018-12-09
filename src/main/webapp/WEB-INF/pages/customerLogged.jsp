@@ -1,84 +1,93 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri = "http://www.springframework.org/tags/form" prefix="mvc" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="mvc"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page isELIgnored="false" %>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style1.css"/>">
 <script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/main.js" />"></script>
-<meta charset="UTF-8">
-<title>Customer Confirm</title>
+<title>Customer History</title>
 </head>
 <body>
 <section id="container">
   <header>
 	<section id="title">
-	  <h1>Confirm Customer Information</h1>
+	  <h1>Candy Store</h1>
 	</section>
 	<section id="navbar">
 	  <nav>
 		<ul>
 		  <li><a href = "home.mvc">Home</a></li>
-		  <li><a href = "viewItem.mvc">Catalog</a></li>
+		  <li><a href = "viewItem.mvc">Begin a New Order</a></li>
 		</ul>
 	  </nav>
 	</section>
   </header>
   <section id="main">
-<h2>Confirm Customer Information</h2>
-<mvc:form name="customerinfo" modelAttribute="customer" action="final.mvc" >
     <table>
         <tr>
-            <td>First Name</td>
-            <td>${customer.firstname}</td>
-        </tr>
-        <tr>
-            <td>Last Name</td>
-            <td>${customer.lastname}</td>
+            <td>${user.firstname}</td>
+            <td>${user.lastname}</td>
         </tr>
         <tr>
             <td>Address</td>
-            <td>${customer.address}</td>
+            <td>${user.address}</td>
         </tr>
         <tr>
             <td>City</td>
-            <td>${customer.city}</td>
+            <td>${user.city}</td>
         </tr>
         <tr>
             <td>State</td>
-            <td>${customer.state}</td>
+            <td>${user.state}</td>
         </tr>
         <tr>
             <td>Zip</td>
-            <td>${customer.zip}</td>
+            <td>${user.zip}</td>
         </tr>
         <tr>
             <td>Country</td>
-            <td>${customer.country}</td>
+            <td>${user.country}</td>
         </tr>
         <tr>
             <td>Email</td>
-            <td>${customer.email}</td>
+            <td>${user.email}</td>
         </tr>
         <tr>
             <td>Username</td>
-            <td>${customer.username}</td>
+            <td>${user.username}</td>
         </tr>
-         <tr>
-    	        <td colspan="2">
-                    <input type="submit" value="Complete Order" />
-    	        </td>
-    	    </tr>
         </table>
-</mvc:form>
+        <c:forEach items="${all}" var="orderitem">
+			<div class="tablelist">
+				<table>
+				<tr>
+					<td>Item ID</td>
+					<td>${orderitem.itemid}</td>
+					<td>Item</td>
+					<td>${orderitem.itemname}</td>
+					<td>Quantity</td>
+					<td>${orderitem.quantity}</td>
+					<td>Total cost:</td>
+					<td>${orderitem.totalcost}</td>
+				</tr>
+				</table>
+			</div>
+		</c:forEach>
+        <table>
+        <tr>
+        <td>Order Total Cost:</td>
+        <td>${ordercost.ordercost}</td>
+        </tr>
+        </table>
   </section>
   <footer>
 	<nav>
 	  <ul>
 	    <li><a href = "home.mvc">Home</a></li>
-		<li><a href = "viewItem.mvc">Catalog</a></li>
+		<li><a href = "viewItem.mvc">Begin a New Order</a></li>
 	  </ul>
 	</nav>
   </footer>

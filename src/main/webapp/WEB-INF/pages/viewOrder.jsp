@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style1.css"/>">
 <script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/main.js" />"></script>
-<title>Order Item</title>
+<title>Candy Order</title>
 </head>
 <body>
 <section id="container">
@@ -20,34 +20,38 @@
 	  <nav>
 		<ul>
 		  <li><a href = "home.mvc">Home</a></li>
-		  <li><a href = "viewItem.mvc">Catalog</a></li>
+		  <li><a href = "viewItemCont.mvc">Catalog</a></li>
 		</ul>
 	  </nav>
 	</section>
   </header>
   <section id="main">
-  <mvc:label path="tempCustomer" name="tempCustomer" modelAttribute="tempCustomer" />
-  <mvc:label path="orderNumber" name="orderNumber" modelAttribute="orderNumber" />
-  
-<h1>Order Item</h1>
-	<mvc:form name="orderItemForm" modelAttribute="tempitem" action="writeOrder.mvc">
-		<c:forEach items="${all}" var="item">
+<h1>Current Order</h1>
+<mvc:form name="orderItemForm" modelAttribute="orderitem" action="delete.mvc">
+		<c:forEach items="${all}" var="orderitem">
 			<div class="tablelist">
 				<table>
-					<tr>
-					    <td><input type="text" name="quantity"/></td>
-						<td><input type="text" name="itemid" value="${item.itemid}"/></td>
-						<td><input type="text" name="itemname" value="${item.itemname}"/></td>
-						<td><input type="text" name="itemcolor" value="${item.itemcolor}"/></td>
-						<td><input type="text" name="retail" value="${item.retail}"/></td>
-					</tr>
+				<tr>
+					<td><input type="radio" name="orderitemid" value="${orderitem.orderitemid}"/></td>
+					<td>Item ID: </td>
+					<td>${orderitem.itemid}</td>
+					<td>Item: </td>
+					<td>${orderitem.itemname}</td>
+					<td>Quantity: </td>
+					<td>${orderitem.quantity}</td>
+					<td>Total cost: </td>
+					<td>${orderitem.totalcost}</td>
+				</tr>
 				</table>
 			</div>
 		</c:forEach>
-		<br />
-		<input type="submit" value= 'Place Order' />
-		<mvc:errors path="quantity" cssClass="error" />		
+				<br />
+		<input type="submit" value= 'Delete Item' />
+		<mvc:errors path="orderitemid" cssClass="error" />			
 	</mvc:form>
+		<a href = "viewItemCont.mvc">Add another item.</a>
+		<a href = "form.mvc">Submit Total Order.</a>
+		<br />
   </section>
   <footer>
 	<nav>
