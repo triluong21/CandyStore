@@ -85,7 +85,6 @@
     	    </tr>
     	</table>
     </mvc:form>
-    <a href = "viewAll.mvc">View all Customers</a>
   </section>
 	<footer>
 	    <nav>

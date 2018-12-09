@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://www.springframework.org/tags/form" prefix="mvc" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@
 <section id="container">
   <header>
 	<section id="title">
-	  <h1>Candy Store</h1>
+	  <h1>Confirm Customer Information</h1>
 	</section>
 	<section id="navbar">
 	  <nav>
@@ -26,46 +27,52 @@
 	</section>
   </header>
   <section id="main">
-<h2>Customer Registration Result</h2>
+<h2>Confirm Customer Information</h2>
+<mvc:form name="customerinfo" modelAttribute="customer" action="final.mvc" >
     <table>
         <tr>
             <td>First Name</td>
-            <td>${c.firstname}</td>
+            <td>${customer.firstname}</td>
         </tr>
         <tr>
             <td>Last Name</td>
-            <td>${c.lastname}</td>
+            <td>${customer.lastname}</td>
         </tr>
         <tr>
             <td>Address</td>
-            <td>${c.address}</td>
+            <td>${customer.address}</td>
         </tr>
         <tr>
             <td>City</td>
-            <td>${c.city}</td>
+            <td>${customer.city}</td>
         </tr>
         <tr>
             <td>State</td>
-            <td>${c.state}</td>
+            <td>${customer.state}</td>
         </tr>
         <tr>
             <td>Zip</td>
-            <td>${c.zip}</td>
+            <td>${customer.zip}</td>
         </tr>
         <tr>
             <td>Country</td>
-            <td>${c.country}</td>
+            <td>${customer.country}</td>
         </tr>
         <tr>
             <td>Email</td>
-            <td>${c.email}</td>
+            <td>${customer.email}</td>
         </tr>
         <tr>
             <td>Username</td>
-            <td>${c.username}</td>
+            <td>${customer.username}</td>
         </tr>
+         <tr>
+    	        <td colspan="2">
+                    <input type="submit" value="Complete Order" />
+    	        </td>
+    	    </tr>
         </table>
-<a href = "viewAll.mvc">View all Customers</a>
+</mvc:form>
   </section>
   <footer>
 	<nav>

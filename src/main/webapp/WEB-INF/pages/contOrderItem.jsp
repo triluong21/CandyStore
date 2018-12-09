@@ -20,7 +20,7 @@
 	  <nav>
 		<ul>
 		  <li><a href = "home.mvc">Home</a></li>
-		  <li><a href = "viewItem.mvc">Catalog</a></li>
+		  <li><a href = "viewItemCont.mvc">Catalog</a></li>
 		</ul>
 	  </nav>
 	</section>
@@ -28,7 +28,6 @@
   <section id="main">
   <mvc:label path="tempCustomer" name="tempCustomer" modelAttribute="tempCustomer" />
   <mvc:label path="orderNumber" name="orderNumber" modelAttribute="orderNumber" />
-  
 <h1>Order Item</h1>
 	<mvc:form name="orderItemForm" modelAttribute="tempitem" action="writeOrder.mvc">
 		<c:forEach items="${all}" var="item">

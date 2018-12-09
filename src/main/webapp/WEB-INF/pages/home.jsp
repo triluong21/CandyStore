@@ -21,6 +21,7 @@
 		<ul>
 		  <li><a href = "home.mvc">Home</a></li>
 		  <li><a href = "viewItem.mvc">Catalog</a></li>
+		  <li><a href = "login.mvc">Login</a></li>
 		</ul>
 	  </nav>
 	</section>

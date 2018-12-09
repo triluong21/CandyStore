@@ -27,22 +27,23 @@
   </header>
   <section id="main">
 <h1>Candy Catalog</h1>
+<mvc:label path="tempCustomer" name="tempCustomer" modelAttribute="tempCustomer" />
 	<mvc:form name="catalogForm" modelAttribute="item" action="viewSelectedItem.mvc">
 		<c:forEach items="${all}" var="item">
 			<div class="tablelist">
 				<table>
 					<tr>
 						<td><input type="radio" name="itemid" value="${item.itemid}"/></td>
-						<td><input type="text" name="iname" value="${item.itemname}"/></td>
-						<td><input type="text" name="icolor" value="${item.itemcolor}"/></td>
-						<td><input type="text" name="iretail" value="${item.retail}"/></td>
+						<td><input type="text" name="itemname" value="${item.itemname}"/></td>
+						<td><input type="text" name="itemcolor" value="${item.itemcolor}"/></td>
+						<td><input type="text" name="retail" value="${item.retail}"/></td>
 					</tr>
 				</table>
 			</div>
 		</c:forEach>
 		<br />
 		<input type="submit" value= 'Select Item' />
-		<td><mvc:errors path="id" cssClass="error" /></td>
+		<td><mvc:errors path="erroritemid" cssClass="error" /></td>
 	</mvc:form>
   </section>
   <footer>

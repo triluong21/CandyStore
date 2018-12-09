@@ -11,13 +11,24 @@
 <title>Customer History</title>
 </head>
 <body>
+<section id="container">
+  <header>
+	<section id="title">
+	  <h1>Candy Store</h1>
+	</section>
+	<section id="navbar">
+	  <nav>
+		<ul>
+		  <li><a href = "home.mvc">Home</a></li>
+		  <li><a href = "viewItem.mvc">Begin a New Order</a></li>
+		</ul>
+	  </nav>
+	</section>
+  </header>
+  <section id="main">
     <table>
         <tr>
-            <td>First Name</td>
             <td>${user.firstname}</td>
-        </tr>
-        <tr>
-            <td>Last Name</td>
             <td>${user.lastname}</td>
         </tr>
         <tr>
@@ -49,6 +60,37 @@
             <td>${user.username}</td>
         </tr>
         </table>
-        
+        <c:forEach items="${all}" var="orderitem">
+			<div class="tablelist">
+				<table>
+				<tr>
+					<td>Item ID</td>
+					<td>${orderitem.itemid}</td>
+					<td>Item</td>
+					<td>${orderitem.itemname}</td>
+					<td>Quantity</td>
+					<td>${orderitem.quantity}</td>
+					<td>Total cost:</td>
+					<td>${orderitem.totalcost}</td>
+				</tr>
+				</table>
+			</div>
+		</c:forEach>
+        <table>
+        <tr>
+        <td>Order Total Cost:</td>
+        <td>${ordercost.ordercost}</td>
+        </tr>
+        </table>
+  </section>
+  <footer>
+	<nav>
+	  <ul>
+	    <li><a href = "home.mvc">Home</a></li>
+		<li><a href = "viewItem.mvc">Begin a New Order</a></li>
+	  </ul>
+	</nav>
+  </footer>
+</section>
 </body>
 </html>

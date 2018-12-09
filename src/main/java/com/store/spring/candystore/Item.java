@@ -15,7 +15,7 @@ public class Item {
 	private String itemname;
 	private String itemcolor;
 	private double cost;
-	private int quantity;
+	private String quantity;
 	private double retail;
 	
 	
@@ -28,7 +28,7 @@ public class Item {
 		return itemid;
 	}
 	
-	public Item(String itemname, String itemcolor, double cost, int quantity, double retail) {
+	public Item(String itemname, String itemcolor, double cost, String quantity, double retail) {
 		super();
 		this.itemname = itemname;
 		this.itemcolor = itemcolor;
@@ -66,11 +66,11 @@ public class Item {
 		this.cost = cost;
 	}
 	
-	public int getQuantity() {
+	public String getQuantity() {
 		return quantity;
 	}
 	
-	public void setQuantity(int quantity) {
+	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
 	
