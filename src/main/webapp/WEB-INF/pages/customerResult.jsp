@@ -67,8 +67,8 @@
             <td align = "left">${customer.username}</td>
         </tr>
          <tr>
-    	        <td colspan="2" align = "center">
-                    <input type="submit" value="Complete Order" />
+    	        <td colspan="2">
+                    <input type="submit" value="Confirm" />
     	        </td>
     	    </tr>
         </table>
