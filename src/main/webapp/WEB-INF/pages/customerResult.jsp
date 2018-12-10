@@ -15,7 +15,7 @@
 <section id="container">
   <header>
 	<section id="title">
-	  <h1>Confirm Customer Information</h1>
+	  <p><a href=home.mvc><img src="<c:url value="/resources/images/totallysweetsbannerheader.png"/>" alt="Header logo" class="head" id="top"/></a></p>
 	</section>
 	<section id="navbar">
 	  <nav>
@@ -31,40 +31,40 @@
 <mvc:form name="customerinfo" modelAttribute="customer" action="final.mvc" >
     <table>
         <tr>
-            <td>First Name</td>
-            <td>${customer.firstname}</td>
+            <td align = "right">First Name</td>
+            <td align = "left">${customer.firstname}</td>
         </tr>
         <tr>
-            <td>Last Name</td>
-            <td>${customer.lastname}</td>
+            <td align = "right">Last Name</td>
+            <td align = "left">${customer.lastname}</td>
         </tr>
         <tr>
-            <td>Address</td>
-            <td>${customer.address}</td>
+            <td align = "right">Address</td>
+            <td align = "left">${customer.address}</td>
         </tr>
         <tr>
-            <td>City</td>
-            <td>${customer.city}</td>
+            <td align = "right">City</td>
+            <td align = "left">${customer.city}</td>
         </tr>
         <tr>
-            <td>State</td>
-            <td>${customer.state}</td>
+            <td align = "right">State</td>
+            <td align = "left">${customer.state}</td>
         </tr>
         <tr>
-            <td>Zip</td>
-            <td>${customer.zip}</td>
+            <td align = "right">Zip</td>
+            <td align = "left">${customer.zip}</td>
         </tr>
         <tr>
-            <td>Country</td>
-            <td>${customer.country}</td>
+            <td align = "right">Country</td>
+            <td align = "left">${customer.country}</td>
         </tr>
         <tr>
-            <td>Email</td>
-            <td>${customer.email}</td>
+            <td align = "right">Email</td>
+            <td align = "left">${customer.email}</td>
         </tr>
         <tr>
-            <td>Username</td>
-            <td>${customer.username}</td>
+            <td align = "right">Username</td>
+            <td align = "left">${customer.username}</td>
         </tr>
          <tr>
     	        <td colspan="2">
@@ -81,6 +81,7 @@
 		<li><a href = "viewItem.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
+	<p>Disclaimer:  This webpage is not an actual business.  It is purely for practice and is not to be used elseways.</p>
   </footer>
 </section>
 </body>
