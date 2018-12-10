@@ -26,6 +26,11 @@ body{
 	font: normal normal normal 1em/2em Chicago, sans-serif;
 }
 
+img.head{
+	width:100%;
+	height:20%;
+}
+
 /*XXXXXXXXXXXXXXXXXXXXXXXXX  
 
         DIVISIONS  
@@ -41,7 +46,6 @@ XXXXXXXXXXXXXXXXXXXXXXXXX*/
 }
 
 header{
-	margin-top:2%;
 	border-bottom: solid thick #c9c9e5;
 }
 
@@ -104,10 +108,82 @@ nav ul li a:hover{
            MISC  
 
 XXXXXXXXXXXXXXXXXXXXXXXXX*/
-
+/*
 .tablelist table{
 	border: none;
 	font-family: arial;
 	color:navy;
 }
+*/
+.error{
+	color: red;
+}
 
+.right{
+	text-align: right;
+}
+
+.left{
+	text-align: left;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXX  
+
+         BUTTON  
+
+XXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+.btn{
+	
+}
+
+
+.btn{
+	width:10%;
+	padding:5px;
+	margin:2px;
+	color:#000000;
+	background:#ffffff;
+	border: solid 3px #000000
+	text-decoration:none;
+}
+
+.btn:hover{
+	background:#000000;
+	color:#ffffff;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXX  
+
+          TABLE  
+
+XXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+table{
+	width:90%;
+	margin:10px auto;
+	border: solid 2px #9898cd;
+	border-collapse: collapse;
+	background-color:#ffb9d5;
+	text-align:center;
+}
+
+caption{
+	border: solid 2px #9898cd;
+	padding:4px;
+	color:#000000;
+	background-color:#ffb9d5;
+	font-weight:bold;
+	font-size:1.2em;
+	border-radius: 20px 20px 0 0;
+}
+
+td, th{
+	border-top: solid 2px #9898cd;
+	border-bottom: solid 2px #9898cd;
+	padding:7px;
+}
+
+tr:hover{
+	background-color:#c9c9e5;
+}
