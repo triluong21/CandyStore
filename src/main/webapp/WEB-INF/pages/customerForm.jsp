@@ -81,7 +81,7 @@
             </tr>
             <tr>
     	        <td colspan="3" align = "center">
-                    <input type="submit" value="Submit" />
+                    <input class="bigger"  type="submit" value="Submit" />
     	        </td>
     	    </tr>
     	</table>

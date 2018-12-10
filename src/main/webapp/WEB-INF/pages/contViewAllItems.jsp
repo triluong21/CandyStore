@@ -43,7 +43,7 @@
 			</div>
 		</c:forEach>
 		<br />
-		<input type="submit" value= 'Select Item' />
+		<input class="bigger"  type="submit" value= 'Select Item' />
 		<td><mvc:errors path="itemid" cssClass="error" /></td>
 	</mvc:form>
   </section>

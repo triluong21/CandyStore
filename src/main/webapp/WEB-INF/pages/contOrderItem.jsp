@@ -45,7 +45,7 @@
 			</div>
 		</c:forEach>
 		<br />
-		<input type="submit" value= 'Place Order' />
+		<input class="bigger" type="submit" value= 'Place Order' />
 		<mvc:errors path="quantity" cssClass="error" />		
 	</mvc:form>
   </section>

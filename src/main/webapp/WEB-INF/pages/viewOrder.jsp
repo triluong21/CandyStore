@@ -46,7 +46,7 @@
 			</div>
 		</c:forEach>
 				<br />
-		<input type="submit" value= 'Delete Item' />
+		<input class="bigger"  type="submit" value= 'Delete Item' />
 		<mvc:errors path="orderitemid" cssClass="error" />			
 		</mvc:form>
 		<a class = "btn" href = "viewItemCont.mvc">Add another item.</a>

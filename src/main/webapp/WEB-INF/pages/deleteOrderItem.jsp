@@ -45,7 +45,7 @@
 			</div>
 		</c:forEach>
 				<br />
-		<input type="submit" value= 'Delete this Item' />		
+		<input class="bigger"  type="submit" value= 'Delete this Item' />		
 	</mvc:form>
   </section>
   <footer>
