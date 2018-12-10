@@ -14,7 +14,7 @@
 <section id="container">
   <header>
 	<section id="title">
-	  <h1>Candy Store</h1>
+	  <p><a href=home.mvc><img src="<c:url value="/resources/images/totallysweetsbannerheader.png"/>" alt="Header logo" class="head" id="top"/></a></p>
 	</section>
 	<section id="navbar">
 	  <nav>
@@ -34,14 +34,12 @@
 				<table>
 				<tr>
 				    <td><input type="radio" name="orderitemid" value="${orderitem.orderitemid}"/></td>
-					<td>Item ID: </td>
-					<td>${orderitem.itemid}</td>
-					<td>Item: </td>
-					<td>${orderitem.itemname}</td>
-					<td>Quantity: </td>
-					<td>${orderitem.quantity}</td>
-					<td>Total cost: </td>
-					<td>${orderitem.totalcost}</td>
+					<td align = "right">Item: </td>
+					<td align = "left">${orderitem.itemname}</td>
+					<td align = "right">Quantity: </td>
+					<td align = "left">${orderitem.quantity}</td>
+					<td align = "right">Total cost: </td>
+					<td align = "left">${orderitem.totalcost}</td>
 				</tr>
 				</table>
 			</div>
@@ -57,6 +55,7 @@
 		<li><a href = "viewItemCont.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
+	<p>Disclaimer:  This webpage is not an actual business.  It is purely for practice and is not to be used elseways.</p>
   </footer>
 </section>
 </body>

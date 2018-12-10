@@ -14,7 +14,7 @@
   <section id="container">
     <header>
 	  <section id="title">
-	    <h1>Candy Store</h1>
+	  <p><a href=home.mvc><img src="<c:url value="/resources/images/totallysweetsbannerheader.png"/>" alt="Header logo" class="head" id="top"/></a></p>
 	  </section>
 	  <section id="navbar">
 	    <nav>
@@ -30,56 +30,57 @@
     <mvc:form modelAttribute="customer" action="result.mvc">
     	<table>
     	    <tr>
-    	        <td><mvc:label path="firstname">First Name</mvc:label></td>
-    	        <td><mvc:input path="firstname" /></td>
-    	        <td><mvc:errors path="firstname" cssClass="error" /></td>
+    	        <td align = "right"><mvc:label path="firstname">First Name</mvc:label></td>
+    	        <td align = "left"><mvc:input path="firstname" /></td>
+    	        <td align = "left"><mvc:errors path="firstname" cssClass="error" /></td>
     	    </tr>
     	    <tr>
-    	        <td><mvc:label path="lastname">Last Name</mvc:label></td>
-    	        <td><mvc:input path="lastname" /></td>
-    	        <td><mvc:errors path="lastname" cssClass="error" /></td>
+    	        <td align = "right"><mvc:label path="lastname">Last Name</mvc:label></td>
+    	        <td align = "left"><mvc:input path="lastname" /></td>
+    	        <td align = "left"><mvc:errors path="lastname" cssClass="error" /></td>
     	    </tr>
     	    <tr>
-    	        <td><mvc:label path="address">Address</mvc:label></td>
-    	        <td><mvc:input path="address" /></td>
-    	        <td><mvc:errors path="address" cssClass="error" /></td>
+    	        <td align = "right"><mvc:label path="address">Address</mvc:label></td>
+    	        <td align = "left"><mvc:input path="address" /></td>
+    	        <td align = "left"><mvc:errors path="address" cssClass="error" /></td>
     	    </tr>
        	    <tr>
-    	        <td><mvc:label path="city">City</mvc:label></td>
-    	        <td><mvc:input path="city" /></td>
-    	        <td><mvc:errors path="city" cssClass="error" /></td>
+    	        <td align = "right"><mvc:label path="city">City</mvc:label></td>
+    	        <td align = "left"><mvc:input path="city" /></td>
+    	        <td align = "left"><mvc:errors path="city" cssClass="error" /></td>
     	    </tr>
     		<tr>
-                <td><mvc:label path="state">State</mvc:label></td>
-                <td><mvc:input path="state" /></td>
-                <td><mvc:errors path="state" cssClass="error" /></td>
+                <td align = "right"><mvc:label path="state">State</mvc:label></td>
+                <td align = "left"><mvc:input path="state" /></td>
+                <td align = "left"><mvc:errors path="state" cssClass="error" /></td>
             </tr>
             <tr>
-    	        <td><mvc:label path="zip">Zip</mvc:label></td>
-    	        <td><mvc:input path="zip" /></td>
-    	        <td><mvc:errors path="zip" cssClass="error" /></td>
+    	        <td align = "right"><mvc:label path="zip">Zip</mvc:label></td>
+    	        <td align = "left"><mvc:input path="zip" /></td>
+    	        <td align = "left"><mvc:errors path="zip" cssClass="error" /></td>
     	    </tr>
             <tr>
-                <td><mvc:label path="country">Country</mvc:label></td>
-                <td><mvc:select path="country" items="${countries}" /></td>
+                <td align = "right"><mvc:label path="country">Country</mvc:label></td>
+                <td align = "left"><mvc:select path="country" items="${countries}" /></td>
+                <td></td>
             </tr>
             <tr>
-                <td><mvc:label path="email">Email</mvc:label></td>
-                <td><mvc:input path="email" /></td>
-                <td><mvc:errors path="email" cssClass="error" /></td>
+                <td align = "right"><mvc:label path="email">Email</mvc:label></td>
+                <td align = "left"><mvc:input path="email" /></td>
+                <td align = "left"><mvc:errors path="email" cssClass="error" /></td>
             </tr>
             <tr>
-                <td><mvc:label path="username">Username</mvc:label></td>
-                <td><mvc:input path="username" /></td>
-                <td><mvc:errors path="username" cssClass="error" /></td>
+                <td align = "right"><mvc:label path="username">Username</mvc:label></td>
+                <td align = "left"><mvc:input path="username" /></td>
+                <td align = "left"><mvc:errors path="username" cssClass="error" /></td>
             </tr>
             <tr>
-                <td><mvc:label path="password">Password</mvc:label></td>
-                <td><mvc:input path="password" /></td>
-                <td><mvc:errors path="password" cssClass="error" /></td>
+                <td align = "right"><mvc:label path="password">Password</mvc:label></td>
+                <td align = "left"><mvc:input path="password" /></td>
+                <td align = "left"><mvc:errors path="password" cssClass="error" /></td>
             </tr>
             <tr>
-    	        <td colspan="2">
+    	        <td colspan="3" align = "center">
                     <input type="submit" value="Submit" />
     	        </td>
     	    </tr>
@@ -93,6 +94,7 @@
 		    <li><a href = "viewItem.mvc">Catalog</a></li>
 		  </ul>
 		</nav>
+	<p>Disclaimer:  This webpage is not an actual business.  It is purely for practice and is not to be used elseways.</p>
 	</footer>
 </section>
 </body>
