@@ -40,7 +40,7 @@
             <td align = "left">${user.city}</td>
         </tr>
         <tr>
-            <td align = "right">State</p></td>
+            <td align = "right">State</td>
             <td align = "left">${user.state}</td>
         </tr>
         <tr>
@@ -68,7 +68,7 @@
 					<td align = "left">${orderitem.itemname}</td>
 					<td align = "right">Quantity</td>
 					<td align = "left">${orderitem.quantity}</td>
-					<td align = "right">Total cost:</td>
+					<td align = "right">Total cost: $</td>
 					<td align = "left">${orderitem.totalcost}</td>
 				</tr>
 		</c:forEach>
@@ -76,7 +76,7 @@
 		</div>
         <table>
         	<tr>
-        		<td align = "right">Order Total Cost:</td>
+        		<td align = "right">Order Total Cost: $</td>
         		<td align = "left">${ordercost.ordercost}</td>
         	</tr>
         </table>

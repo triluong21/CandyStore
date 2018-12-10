@@ -13,6 +13,7 @@
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="eclipselink.jdbc.batch-writing" value="Buffered"/>
 			<property name="javax.persistence.jdbc.password" value="Dr3^am"/>
+			<property name="eclipselink.jdbc.bind-parameters" value="true"/>
 		</properties>
 	</persistence-unit>
 </persistence>
