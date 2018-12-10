@@ -128,7 +128,7 @@ public class StoreController {
 		return bean;
 	}
 
-	//view customer list
+	//view all customers in the database
 	@RequestMapping(value = "/viewAll")
 	public ModelAndView viewAll( ){
 		ModelAndView modelAndView = new ModelAndView();
