@@ -14,7 +14,11 @@
 <section id="container">
   <header>
 	<section id="title">
+<<<<<<< HEAD
 	  <h1>Candy Store</h1>
+=======
+	  <p><a href=home.mvc><img src="<c:url value="/resources/images/totallysweetsbannerheader.png"/>" alt="Header logo" class="head" id="top"/></a></p>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 	</section>
 	<section id="navbar">
 	  <nav>
@@ -34,15 +38,26 @@
 				<table>
 					<tr>
 						<td><input type="radio" name="itemid" value="${item.itemid}"/></td>
+<<<<<<< HEAD
 						<td><input type="text" name="itemname" value="${item.itemname}"/></td>
 						<td><input type="text" name="itemcolor" value="${item.itemcolor}"/></td>
 						<td><input type="text" name="retail" value="${item.retail}"/></td>
+=======
+						<td align = "right">Name:</td>
+						<td align = "left"><input type="text" name="itemname" value="${item.itemname}"/></td>
+						<td align = "right">Cost:</td>
+						<td align = "left"><input type="text" name="retail" value="${item.retail}"/></td>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 					</tr>
 				</table>
 			</div>
 		</c:forEach>
 		<br />
+<<<<<<< HEAD
 		<input type="submit" value= 'Select Item' />
+=======
+		<input class="bigger"  type="submit" value= 'Select Item' />
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 		<td><mvc:errors path="erroritemid" cssClass="error" /></td>
 	</mvc:form>
   </section>
@@ -53,6 +68,10 @@
 		<li><a href = "viewItem.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
+<<<<<<< HEAD
+=======
+	<p>Disclaimer:  This webpage is not an actual business.  It is purely for practice and is not to be used elseways.</p>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
   </footer>
 </section>
 </body>

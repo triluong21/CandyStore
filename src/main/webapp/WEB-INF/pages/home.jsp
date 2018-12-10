@@ -14,7 +14,11 @@
 <section id="container">
   <header>
 	<section id="title">
+<<<<<<< HEAD
 	  <h1>Candy Store</h1>
+=======
+	  <p><a href=home.mvc><img src="<c:url value="/resources/images/totallysweetsbannerheader.png"/>" alt="Header logo" class="head" id="top"/></a></p>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 	</section>
 	<section id="navbar">
 	  <nav>
@@ -27,7 +31,21 @@
 	</section>
   </header>
   <section id="main">
+<<<<<<< HEAD
     
+=======
+    <h1>Welcome to Totally Sweets!</h1>
+    <p>Here at Totally Sweets, we have the totality of all sweets!  We give it our all to fulfill all orders we receive when we receive them. 
+    With our vast collection of sweets, we aim to cater to all needs of our customers.  Should you desire to contact us directly, please use the following contact methods:</p>
+    <h3>Mailing address:</h3>
+    <p>Totally Sweets</p>
+    <p>1234 Nope Pkwy</p>
+    <p>Missing, DE 11111</p>
+    <h3>Phone:</h3>
+    <p>(555) 111-1234</p>
+    <h3>Email:</h3>
+    <p>notarealemailaddress@nope.com</p>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
   </section>
   <footer>
 	<nav>
@@ -36,6 +54,10 @@
 		<li><a href = "viewItem.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
+<<<<<<< HEAD
+=======
+	<p>Disclaimer:  This webpage is not an actual business.  It is purely for practice and is not to be used elseways.</p>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
   </footer>
 </section>
 </body>

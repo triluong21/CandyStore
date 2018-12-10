@@ -129,7 +129,11 @@ public class StoreController {
 		return bean;
 	}
 
+<<<<<<< HEAD
 	//view customer list
+=======
+	//view all customers in the database
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 	@RequestMapping(value = "/viewAll")
 	public ModelAndView viewAll( ){
 		ModelAndView modelAndView = new ModelAndView();
@@ -288,6 +292,7 @@ public class StoreController {
 		List<OrderItem> allOrderItems = dao.getAllOrderItems(tempO);
 		modelAndView.setViewName("viewOrder");
 		modelAndView.addObject("all", allOrderItems);
+<<<<<<< HEAD
 		return modelAndView;
 	}
 
@@ -352,6 +357,72 @@ public class StoreController {
 		return modelAndView;
 	}
 
+=======
+		return modelAndView;
+	}
+
+	
+	@RequestMapping(value="/viewOrder")
+	public ModelAndView viewOrder() {
+		ModelAndView modelAndView = new ModelAndView( );
+        List<OrderItem> allOrderItems = dao.getAllOrderItems(tempO);
+		modelAndView.setViewName("viewOrder");
+		modelAndView.addObject("all", allOrderItems);
+		return modelAndView;
+	}
+	
+	//login screen
+	@RequestMapping(value = "/login")
+	public ModelAndView customerLogin( ){
+		ModelAndView modelAndView = new ModelAndView( );
+		modelAndView.setViewName("login");
+		modelAndView.addObject("customer", new Customer( ));
+
+		return modelAndView;
+	}
+
+
+	//login effect
+	@RequestMapping(value = "/loginAttempt")
+	public ModelAndView customerLoginAttempt(@ModelAttribute("customer") Customer customer, BindingResult result){
+		ModelAndView modelAndView = new ModelAndView( );
+		Customer user = new Customer();
+		boolean error = false;
+
+		if(customer.getUsername().isEmpty()){
+			result.rejectValue("username", "error.username");
+			error = true;
+	    }
+
+		if(customer.getPassword().isEmpty()){
+			result.rejectValue("password", "error.password");
+			error = true;
+	    }
+
+		if(error) {
+			modelAndView.setViewName("login");
+			return modelAndView;
+		}
+
+        try {
+		 user = dao.usernameLogin(customer);
+        } catch (Exception e){
+        	result.rejectValue("username", "error.userDoesNotExist");
+        	result.rejectValue("password", "error.passwordDoesNotExist");
+        	modelAndView.setViewName("login");
+        	return modelAndView;
+        }
+        Order temp = dao.getCustOrderNum(user);
+        List<OrderItem> allOrderItems = dao.getAllOrderItems(temp);
+		modelAndView.setViewName("customerLogged");
+		modelAndView.addObject("user", user);
+		modelAndView.addObject("all", allOrderItems);
+		modelAndView.addObject("ordercost", temp);
+
+		return modelAndView;
+	}
+
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 	// Homepage
 	@RequestMapping(value = "/home")
 	public ModelAndView home( ){

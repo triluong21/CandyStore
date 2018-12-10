@@ -15,6 +15,7 @@ public class CustomerDao {
 	public void insertCustomer(double tempCost, Order tempO, Customer tempC, Customer customerToAdd){
 		EntityManager em = emfactory.createEntityManager();
 		Customer customer = em.find(Customer.class, tempC.getCustomerid());
+<<<<<<< HEAD
 		em.getTransaction().begin();
 		customer.setFirstname(customerToAdd.getFirstname());
 		customer.setLastname(customerToAdd.getLastname());
@@ -29,6 +30,22 @@ public class CustomerDao {
 		em.getTransaction().commit();
 		Order order = em.find(Order.class,  tempO.getOrderid());
 		em.getTransaction().begin();
+=======
+		em.getTransaction().begin();
+		customer.setFirstname(customerToAdd.getFirstname());
+		customer.setLastname(customerToAdd.getLastname());
+		customer.setAddress(customerToAdd.getAddress());
+		customer.setCity(customerToAdd.getCity());
+		customer.setState(customerToAdd.getState());
+		customer.setZip(customerToAdd.getZip());
+		customer.setCountry(customerToAdd.getCountry());
+		customer.setEmail(customerToAdd.getEmail());
+		customer.setUsername(customerToAdd.getUsername());
+		customer.setPassword(customerToAdd.getPassword());
+		em.getTransaction().commit();
+		Order order = em.find(Order.class,  tempO.getOrderid());
+		em.getTransaction().begin();
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 		order.setShipaddress(customerToAdd.getAddress());
 		order.setShipcity(customerToAdd.getCity());
 		order.setShipstate(customerToAdd.getState());

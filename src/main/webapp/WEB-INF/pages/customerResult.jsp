@@ -15,7 +15,11 @@
 <section id="container">
   <header>
 	<section id="title">
+<<<<<<< HEAD
 	  <h1>Confirm Customer Information</h1>
+=======
+	  <p><a href=home.mvc><img src="<c:url value="/resources/images/totallysweetsbannerheader.png"/>" alt="Header logo" class="head" id="top"/></a></p>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 	</section>
 	<section id="navbar">
 	  <nav>
@@ -31,6 +35,7 @@
 <mvc:form name="customerinfo" modelAttribute="customer" action="final.mvc" >
     <table>
         <tr>
+<<<<<<< HEAD
             <td>First Name</td>
             <td>${customer.firstname}</td>
         </tr>
@@ -69,6 +74,46 @@
          <tr>
     	        <td colspan="2">
                     <input type="submit" value="Complete Order" />
+=======
+            <td align = "right">First Name</td>
+            <td align = "left">${customer.firstname}</td>
+        </tr>
+        <tr>
+            <td align = "right">Last Name</td>
+            <td align = "left">${customer.lastname}</td>
+        </tr>
+        <tr>
+            <td align = "right">Address</td>
+            <td align = "left">${customer.address}</td>
+        </tr>
+        <tr>
+            <td align = "right">City</td>
+            <td align = "left">${customer.city}</td>
+        </tr>
+        <tr>
+            <td align = "right">State</td>
+            <td align = "left">${customer.state}</td>
+        </tr>
+        <tr>
+            <td align = "right">Zip</td>
+            <td align = "left">${customer.zip}</td>
+        </tr>
+        <tr>
+            <td align = "right">Country</td>
+            <td align = "left">${customer.country}</td>
+        </tr>
+        <tr>
+            <td align = "right">Email</td>
+            <td align = "left">${customer.email}</td>
+        </tr>
+        <tr>
+            <td align = "right">Username</td>
+            <td align = "left">${customer.username}</td>
+        </tr>
+         <tr>
+    	        <td colspan="2">
+                    <input class="bigger"  type="submit" value="Confirm" />
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
     	        </td>
     	    </tr>
         </table>
@@ -81,6 +126,10 @@
 		<li><a href = "viewItem.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
+<<<<<<< HEAD
+=======
+	<p>Disclaimer:  This webpage is not an actual business.  It is purely for practice and is not to be used elseways.</p>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
   </footer>
 </section>
 </body>

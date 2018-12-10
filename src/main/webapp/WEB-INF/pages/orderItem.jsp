@@ -14,7 +14,11 @@
 <section id="container">
   <header>
 	<section id="title">
+<<<<<<< HEAD
 	  <h1>Candy Store</h1>
+=======
+	  <p><a href=home.mvc><img src="<c:url value="/resources/images/totallysweetsbannerheader.png"/>" alt="Header logo" class="head" id="top"/></a></p>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 	</section>
 	<section id="navbar">
 	  <nav>
@@ -35,7 +39,12 @@
 			<div class="tablelist">
 				<table>
 					<tr>
+<<<<<<< HEAD
 					    <td><input type="text" name="quantity"/></td>
+=======
+						<td align = "right">Quantity:</td>
+					    <td align = "left"><input type="text" name="quantity"/></td>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 						<td><input type="text" name="itemid" value="${item.itemid}"/></td>
 						<td><input type="text" name="itemname" value="${item.itemname}"/></td>
 						<td><input type="text" name="itemcolor" value="${item.itemcolor}"/></td>
@@ -45,7 +54,11 @@
 			</div>
 		</c:forEach>
 		<br />
+<<<<<<< HEAD
 		<input type="submit" value= 'Place Order' />
+=======
+		<input class="bigger"  type="submit" value= 'Place Order' />
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
 		<mvc:errors path="quantity" cssClass="error" />		
 	</mvc:form>
   </section>
@@ -56,6 +69,10 @@
 		<li><a href = "viewItemCont.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
+<<<<<<< HEAD
+=======
+	<p>Disclaimer:  This webpage is not an actual business.  It is purely for practice and is not to be used elseways.</p>
+>>>>>>> 7193c97769f74cc962aeab0855f22d3eccf00e85
   </footer>
 </section>
 </body>
