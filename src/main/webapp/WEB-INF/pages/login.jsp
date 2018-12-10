@@ -14,7 +14,7 @@
     <section id="container">
   <header>
 	<section id="title">
-	  <p><a href=home.mvc><img src="<c:url value="/resources/images/totallysweetsbannerheader.png"/>" alt="Header logo" class="head" id="top"/></a></p>
+	  <h1>Candy Store</h1>
 	</section>
 	<section id="navbar">
 	  <nav>
@@ -29,14 +29,14 @@
         <mvc:form modelAttribute="customer" action="loginAttempt.mvc" >
         <table>
         <tr>
-            <td align = "right"><mvc:label path="username">Enter your user-name</mvc:label></td>
-            <td align = "left"><mvc:input path="username" /></td>
-            <td align = "left"><mvc:errors path="username" cssClass="error" /></td>
+            <td><mvc:label path="username">Enter your user-name</mvc:label></td>
+            <td><mvc:input path="username" /></td>
+            <td><mvc:errors path="username" cssClass="error" /></td>
         </tr>
         <tr>
-            <td align = "right"><mvc:label path="password">Please enter your password</mvc:label></td>
-            <td align = "left"><mvc:password path="password" /></td>
-            <td align = "left"><mvc:errors path="password" cssClass="error" /></td>
+            <td><mvc:label path="password">Please enter your password</mvc:label></td>
+            <td><mvc:password path="password" /></td>
+            <td><mvc:errors path="password" cssClass="error" /></td>
         </tr>
             <tr>
     	        <td colspan="2">
@@ -53,7 +53,6 @@
 		<li><a href = "viewItemCont.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
-	<p>Disclaimer:  This webpage is not an actual business.  It is purely for practice and is not to be used elseways.</p>
   </footer>
 </section>
     </body>

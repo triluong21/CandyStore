@@ -14,7 +14,7 @@
 <section id="container">
   <header>
 	<section id="title">
-	  <p><a href=home.mvc><img src="<c:url value="/resources/images/totallysweetsbannerheader.png"/>" alt="Header logo" class="head" id="top"/></a></p>
+	  <h1>Candy Store</h1>
 	</section>
 	<section id="navbar">
 	  <nav>
@@ -33,14 +33,14 @@
 				<table>
 				<tr>
 					<td><input type="radio" name="orderitemid" value="${orderitem.orderitemid}"/></td>
-					<td align = "right">Item ID: </td>
-					<td align = "left">${orderitem.itemid}</td>
-					<td align = "right">Item: </td>
-					<td align = "left">${orderitem.itemname}</td>
-					<td align = "right">Quantity: </td>
-					<td align = "left">${orderitem.quantity}</td>
-					<td align = "right">Total cost: </td>
-					<td align = "left">${orderitem.totalcost}</td>
+					<td>Item ID: </td>
+					<td>${orderitem.itemid}</td>
+					<td>Item: </td>
+					<td>${orderitem.itemname}</td>
+					<td>Quantity: </td>
+					<td>${orderitem.quantity}</td>
+					<td>Total cost: </td>
+					<td>${orderitem.totalcost}</td>
 				</tr>
 				</table>
 			</div>
@@ -48,9 +48,9 @@
 				<br />
 		<input type="submit" value= 'Delete Item' />
 		<mvc:errors path="orderitemid" cssClass="error" />			
-		</mvc:form>
-		<a class = "btn" href = "viewItemCont.mvc">Add another item.</a>
-		<a class = "btn" href = "form.mvc">Submit Total Order.</a>
+	</mvc:form>
+		<a href = "viewItemCont.mvc">Add another item.</a>
+		<a href = "form.mvc">Submit Total Order.</a>
 		<br />
   </section>
   <footer>
@@ -60,7 +60,6 @@
 		<li><a href = "viewItemCont.mvc">Catalog</a></li>
 	  </ul>
 	</nav>
-	<p>Disclaimer:  This webpage is not an actual business.  It is purely for practice and is not to be used elseways.</p>
   </footer>
 </section>
 </body>
